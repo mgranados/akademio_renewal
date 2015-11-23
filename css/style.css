@@ -1,0 +1,15 @@
+.blue-background{
+	background-color: blue;
+}
+.red-background{
+	background-color: red;
+}
+
+.card{
+	text-align: center;
+	padding: 15px !important;
+/*	margin: 1px !important;
+*/
+	margin-bottom: 0;
+	}
+
