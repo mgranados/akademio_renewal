@@ -5,6 +5,14 @@
 	background-color: red;
 }
 
+.slider h5{
+	font-size: 1.5em;
+
+}
+.slides{
+	background: none !important;
+}
+
 .card{
 	text-align: center;
 	padding: 15px !important;
@@ -48,4 +56,9 @@
 	top: 0;
 	height: 100%;
 	z-index: -1000;
+}
+
+a{
+	text-decoration: underline;
+	color: white;
 }

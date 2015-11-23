@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<!-- Materialize and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 	<!-- Custom CSS -->
@@ -22,7 +23,7 @@
 			</div>
 		</div>
 
-		<!-- Course header -->
+		<!-- COURSE HEADER -->
 		<div class="row center-block">
 			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
 					<div class="row center">
@@ -34,6 +35,7 @@
 					<p>Gabriel Weinberg</p>
 			</div>
 		</div>
+		<!-- /COURSE HEADER -->
 
 		<!-- BIG TEXT -->
 		<div class="row center-block">
@@ -41,8 +43,9 @@
 					<h4>Traction is Growth!</h4>
 			</div>
 		</div>
+		<!-- /BIG TEXT -->
 
-		<!-- Video TEXT -->
+		<!-- VIDEO -->
 		<div class="row center-block">
 			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
 				<div class="video-player">
@@ -59,6 +62,8 @@
 					</div>
 			</div>
 		</div>
+		<!-- /VIDEO -->
+
 
 		<!-- BIG TEXT -->
 		<div class="row center-block">
@@ -66,7 +71,63 @@
 					<h4>There are 19 channels</h4>
 			</div>
 		</div>
+		<!-- /BIG TEXT -->
 
+		<!-- TEXT SLIDER -->
+		<div class="row center-block">
+			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
+				<div class="slider">
+					<ul class="slides">
+					  <li>
+					    <img src="img/transparent.png"> <!-- random image -->
+					    <div class="caption left-align">
+					    	<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Viral Marketing</h5></a>
+					    	<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Unconventional PR</h5></a>
+					    	<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Search Engine Marketing</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Social and Display Ads</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Offline Ads</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Engineering as Marketing</h5></a>
+					    </div>
+					  </li>
+					  <li>
+					    <img src="img/transparent.png"> <!-- random image -->
+					    <div class="caption left-align">
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Targeting Blogs</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Business Development</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Sales</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Affiliate programs</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Existing Platforms</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Trade Shows</h5></a>							
+					    </div>
+					  </li>
+					  <li>
+					    <img src="img/transparent.png"> <!-- random image -->
+					    <div class="caption left-align">
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Offline events</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Speaking engagements</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Community building</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Public Relationships</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Search Engine Optimization</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Content Marketing</h5></a>
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Email Marketing</h5></a>
+					    </div>
+					  </li>
+					</ul>
+				</div>
+				  <!-- Modal Structure -->
+					  <div id="slider-modal" class="modal bottom-sheet">
+					    <div class="modal-content">
+					      <h4 id="modal-slider-title">Title</h4>
+					      <p id="modal-slider-text">
+					      	Content
+					      </p>
+					    </div>
+					  </div>
+				  <!-- /Modal Structure -->
+
+  			</div>
+		</div>
+		<!-- /TEXT SLIDER -->
 
 
 	</div>
@@ -86,12 +147,39 @@
 			$( "#mini-video" ).click();
 		});
 
-		// $( "#mini-video" ).click(function (){
-		// 	if $(this).hasClass('active'){
-		// 		$( "#mini-video").removeClass('active');
-		// 		$( "#mini-video").addClass('offscreen');
-		// 	}
-		// });
+		$('.slider').slider({transition: 250});
+		$('.slider').slider('pause');
+
+		var slider_content_text = new Object(); // or just {}
+		slider_content_text['Viral Marketing'] = "I´m a content that is going to be written by Diegeekster, because he used paper instead of digital media. NOTE THAT THIS DOESN´T USES IDS IN HTML";
+		slider_content_text['Unconventional PR'] = "CONTENT3"
+		slider_content_text['Search Engine Marketing'] = "CONTENT4"
+		slider_content_text['Social and Display Ads'] = "CONTENT5"
+		slider_content_text['Offline Ads'] = "CONTENT6"
+		slider_content_text['Engineering as Marketing'] = "CONTENT7"
+		slider_content_text['Targeting Blogs'] = "CONTENT8"
+		slider_content_text['Business Development'] = "CONTENT9"
+		slider_content_text['Sales'] = "CONTENT10"
+		slider_content_text['Affiliate programs'] = "CONTENT11"
+		slider_content_text['Existing Platforms'] = "CONTENT12"
+		slider_content_text['Offline events'] = "CONTENT13"
+		slider_content_text['Speaking engagements'] = "CONTENT14"
+		slider_content_text['Community building'] = "CONTENT15"
+		slider_content_text['Public Relationships'] = "CONTENT16"
+		slider_content_text['Search Engine Optimization'] = "CONTENT17"
+		slider_content_text['Content Marketing'] = "CONTENT18"
+		slider_content_text['Email Marketing'] = "CONTENT19"
+
+		$('.modal-slider-launcher').click(function(){
+			var title = this.text.replace("label", "");
+			var content = slider_content_text[this.text.replace("label ", "")];
+			$('#modal-slider-title').html(title)
+			$('#modal-slider-text').html(content)
+			$('#slider-modal').openModal();
+
+
+		});
+
 	});
 
 
