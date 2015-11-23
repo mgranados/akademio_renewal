@@ -13,3 +13,39 @@
 	margin-bottom: 0;
 	}
 
+.light-blue-ak-bg{
+	background-color: #5ac8e3;
+}
+
+.smaller-video{
+	height: 220px!important;
+}
+
+.player-image{
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	opacity: 90%;
+}
+
+.player-image:hover{
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	opacity: 100%;
+}
+
+.active{
+	display: block;
+}
+
+.offscreen{
+	display: none;
+}
+
+#mini-video{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	z-index: -1000;
+}
