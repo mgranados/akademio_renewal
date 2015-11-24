@@ -15,13 +15,20 @@
 	<title>Akademio Course Template</title>
 </head>
 <body>
-	<div class="container">
+	<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" style="text-decoration:none;"class="brand-logo">Akademio</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
 
-		<div class="row center-block">
-			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
-    			<h3>Akademio</h3>
-			</div>
-		</div>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" style="text-decoration:none;" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+	<div class="container">
 
 		<!-- COURSE HEADER -->
 		<div class="row center-block">
@@ -40,7 +47,7 @@
 		<!-- BIG TEXT -->
 		<div class="row center-block">
 			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
-					<h4>Traction is Growth!</h4>
+					<h4>What is Traction?</h4>
 			</div>
 		</div>
 		<!-- /BIG TEXT -->
@@ -68,7 +75,7 @@
 		<!-- BIG TEXT -->
 		<div class="row center-block">
 			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
-					<h4>There are 19 channels</h4>
+					<h4>There are 19 channels to grow</h4>
 			</div>
 		</div>
 		<!-- /BIG TEXT -->
@@ -97,7 +104,7 @@
 							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Sales</h5></a>
 							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Affiliate programs</h5></a>
 							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Existing Platforms</h5></a>
-							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Trade Shows</h5></a>							
+							<a  class="modal-slider-launcher"><h5><i class="tiny material-icons">label</i> Trade Shows</h5></a>
 					    </div>
 					  </li>
 					  <li>
@@ -129,6 +136,40 @@
 		</div>
 		<!-- /TEXT SLIDER -->
 
+		<!-- Question -->
+		<div class="row center-block">
+			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
+					<h3>How can you define Traction?</h3>
+					<br/>
+					<a class="waves-effect waves-light btn modal-trigger" href="#modal2">A) Process of growing a startup</a>
+					<br/><br>
+					<a class="waves-effect waves-light btn modal-trigger" href="#modal3">B) Actions to prepare a product launch</a>
+					<br><br>
+			</div>
+		</div>
+		<!-- Modal 1 -->
+		<div id="modal2" class="modal bottom-sheet correct-answer">
+			<div class="modal-content">
+				<h4>✅ Correct!</h4>
+				<p>Traction is the quantitative evidence of customer demand. It is a sign that your startup is taking off. 🚀</p>
+			</div>
+			<div class="modal-footer ">
+				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+			</div>
+		</div>
+
+		<!-- Modal 2 -->
+		<div id="modal3" class="modal bottom-sheet incorrect-answer">
+			<div class="modal-content">
+				<h4>❌ Not quite!</h4>
+				<p>Traction is the quantitative evidence of customer demand. It is a sign that your startup is taking off. 🚀</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+			</div>
+		</div>
+
+		<!-- /Question -->
 
 	</div>
 
@@ -136,10 +177,12 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 	<!-- Materialize minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	<script src="js/materialize.min.js"></script>
 
 	<script type="text/javascript">
 	$( document ).ready(function() {
+
+		$('.modal-trigger').leanModal();
 
 		$("#modaler").click(function (){
 			// $( "#mini-video").addClass('active');
