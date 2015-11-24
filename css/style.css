@@ -65,6 +65,29 @@ a{
 	cursor: pointer;
 }
 
+.firstColor{
+	background-color: #5ac8e3!important;
+}
+.secondColor{
+	background-color: #68c9d0!important;
+}
+.thirdColor{
+	background-color: #74c9bd!important;
+}
+.fourthColor{
+	background-color: #7ecaaa;
+}
+.fifthColor{
+	background-color: #87ca96;
+}
+.sixthColor{
+	background-color: #8fcb83;
+}
+.seventhColor{
+	background-color: #98cc6d;
+}
+
+
 a:hover{
 	cursor: pointer;
 }
@@ -81,4 +104,15 @@ a:hover{
 
 .useful-link{
 	font-size: 1.5em;
+}
+
+.stuckUpper{
+	margin-top: -15px;
+}
+.stuckUpperInside{
+	margin-top: 0px;
+}
+
+.stuckDown{
+
 }
