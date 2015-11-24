@@ -124,11 +124,58 @@
 					    </div>
 					  </div>
 				  <!-- /Modal Structure -->
-
   			</div>
 		</div>
 		<!-- /TEXT SLIDER -->
 
+		<!-- FOOTER -->
+		<div class="row center-block">
+			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
+				<div class="row">
+					<div class="col s12">
+						<h5>Made by:<strong> Gabriel Weinberg </strong></h5>
+					</div>
+					<div class="col s6">
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="MSVXXGQLK5KK6">
+							<button class="btn waves-effect waves-light" type="submit" name="action">Donate
+								<i class="material-icons right hide-on-small-only">redeem</i>
+							</button>
+  						</form>
+					</div>		
+					<div class="col s6">
+						<a class="waves-effect waves-light btn" href="https://twitter.com/intent/tweet?screen_name=abr_gnz&text=Thanks%20for%20this%20great%20course!%20www.akademio.xyz"><i class="material-icons right hide-on-small-only">thumb_up</i>Thank Him!</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /FOOTER -->
+
+		<!-- BIG TEXT -->
+		<div class="row center-block">
+			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
+					<h4>There are 19 channels</h4>
+			</div>
+		</div>
+		<!-- /BIG TEXT -->
+
+		<!-- USEFUL LINKS -->
+		<div class="row center-block">
+			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
+				<div class="row">
+					<div class="col s12">
+						<a class="useful-link" href="#">How to Beat Depression</a>
+					</div>
+					<div class="col s12">
+						<a class="useful-link" href="#">How to growth hack!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /USEFUL LINKS -->
 
 	</div>
 
@@ -145,30 +192,32 @@
 			// $( "#mini-video").addClass('active');
 			$( "#mini-video").removeClass('offscreen');
 			$( "#mini-video" ).click();
+			$('.slider').slider('pause');
 		});
 
 		$('.slider').slider({transition: 250});
 		$('.slider').slider('pause');
 
-		var slider_content_text = new Object(); // or just {}
-		slider_content_text['Viral Marketing'] = "I´m a content that is going to be written by Diegeekster, because he used paper instead of digital media. NOTE THAT THIS DOESN´T USES IDS IN HTML";
-		slider_content_text['Unconventional PR'] = "CONTENT3"
-		slider_content_text['Search Engine Marketing'] = "CONTENT4"
-		slider_content_text['Social and Display Ads'] = "CONTENT5"
-		slider_content_text['Offline Ads'] = "CONTENT6"
-		slider_content_text['Engineering as Marketing'] = "CONTENT7"
-		slider_content_text['Targeting Blogs'] = "CONTENT8"
-		slider_content_text['Business Development'] = "CONTENT9"
-		slider_content_text['Sales'] = "CONTENT10"
-		slider_content_text['Affiliate programs'] = "CONTENT11"
-		slider_content_text['Existing Platforms'] = "CONTENT12"
-		slider_content_text['Offline events'] = "CONTENT13"
-		slider_content_text['Speaking engagements'] = "CONTENT14"
-		slider_content_text['Community building'] = "CONTENT15"
-		slider_content_text['Public Relationships'] = "CONTENT16"
-		slider_content_text['Search Engine Optimization'] = "CONTENT17"
-		slider_content_text['Content Marketing'] = "CONTENT18"
-		slider_content_text['Email Marketing'] = "CONTENT19"
+		var slider_content_text = new Object();
+		slider_content_text['Viral Marketing'] = "Grow user base by encouraging referrals";
+		slider_content_text['Trade Shows'] = "To physically attend to specific-industry events could help you find clients or possible partners";
+		slider_content_text['Unconventional PR'] = "The art of doing something so crazy that it draws media attention";
+		slider_content_text['Search Engine Marketing'] = "Using and paying search engines like Google to draw people to your site";
+		slider_content_text['Social and Display Ads'] = "Paying adds in social networks to reach a specific demographic";
+		slider_content_text['Offline Ads'] = "Attending to different meet-ups or sponsoring them to gain traction";
+		slider_content_text['Engineering as Marketing'] = "Creating something like micro-sites, widgets or tools that draw new users to your business";
+		slider_content_text['Targeting Blogs'] = "To sponsor or pay niche blogs that have a desired public in order to gain customers";
+		slider_content_text['Business Development'] = "To create strategic relationships with other organizations that benefit statue";
+		slider_content_text['Sales'] = "Creating new processes that drive up your revenue";
+		slider_content_text['Affiliate programs'] = "An arrangement where you pay people or companies to perform certain action, like recommending you or selling for you";
+		slider_content_text['Existing Platforms'] = "To take advantage of platforms such as the App store or Facebook by focusing growth efforts in them";
+		slider_content_text['Offline events'] = "Attending to different meet-upsor sponsoring them is a great way to gain traction";
+		slider_content_text['Speaking engagements'] = "To be a speaker in a congress or meet-up is a good way to get traction";
+		slider_content_text['Community building'] = "The action of creating and nourishing a community helps to get people engaged in a conversation and get them closer to your product";
+		slider_content_text['Public Relationships'] = "To gain presence through the traditional media, eg. magazines newspaper";
+		slider_content_text['Search Engine Optimization'] = "Optimizing the text, tags, and keywords in your site so it becomes easier to find for your consumers";
+		slider_content_text['Content Marketing'] = "Creating content like blogs and taking advantage of said platform to grow";
+		slider_content_text['Email Marketing'] = "Awesome way to retain existing users. Successful mailing campaigns help to keep users close and interested";
 
 		$('.modal-slider-launcher').click(function(){
 			var title = this.text.replace("label", "");
@@ -176,9 +225,9 @@
 			$('#modal-slider-title').html(title)
 			$('#modal-slider-text').html(content)
 			$('#slider-modal').openModal();
-
-
 		});
+
+		$('#donate_button.click')
 
 	});
 
