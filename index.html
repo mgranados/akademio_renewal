@@ -10,6 +10,16 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- UI SLIDER-->
+	<!--<link href="css/nouislider.min.css" rel="stylesheet">-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css/extras/nouislider.min.css">
+	<style type="text/css">
+
+		input#audioSeekBar::-ms-fill-lower {
+  	  background: #777;
+    	border-radius: 10px;
+		}
+	</style>
 
 
 	<title>Akademio Course Template</title>
@@ -135,6 +145,7 @@
 		</div>
 		<!-- /TEXT SLIDER -->
 
+<<<<<<< HEAD
 		<!-- FOOTER -->
 		<div class="row center-block">
 			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
@@ -217,19 +228,101 @@
 		</div>
 
 		<!-- /Question -->
+=======
+		<!-- Audio -->
+		<div class="row center-block">
+			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2" style="position:relative">
+				<audio id="audio_custom" controls style="display:none" >
+							  <source src="audio/audio1.mp3" type="audio/mpeg" ontimeupdate="SeekBar()">
+							Your browser does not support the audio element.
+				</audio>
+				<div class="row">
+					<div class="col s3 l2">
+						<a  id="play" class="btn-floating btn-large red">
+				      		<i id="icon" class="large material-icons">play_arrow</i>
+				   		</a>
+					</div>
+					
+				    <div id="controls" style="display:none; padding-top:10px" class="col s9 l9">
+				    	<input type="range" step="any" id="audioSeekBar" style=""></input>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<!-- Audio-->
+		<!-- images slider -->
+		<div class="row center-block">
+			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2" >
+				
+			  <div class="slider">
+			    <ul class="slides">
+			      <li>
+			        <img src="img/brainstom.jpg"> <!-- random image -->
+			        <div class="caption center-align">
+			          <h3>Brainstorming</h3>
+			          <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+			        </div>
+			      </li>
+			      <li>
+			        <img src="img/focus.jpg"> <!-- random image -->
+			        <div class="caption left-align" >
+			          <h3 style="margin-top:65%">Focus</h3>
+			          <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+			        </div>
+			      </li>
+			      <li>
+			        <img src="img/prioritize.jpg"> <!-- random image -->
+			        <div class="caption right-align">
+			          <h3>Prioritize</h3>
+			          <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+			        </div>
+			      </li>
+			      <li>
+			        <img src="img/ranking.jpg"> <!-- random image -->
+			        <div class="caption center-align">
+			          <h3>Ranking</h3>
+			          <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+			        </div>
+			      </li>
+			      <li>
+			        <img src="img/testing.jpg"> <!-- random image -->
+			        <div class="caption center-align">
+			          <h3>Testing</h3>
+			          <!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+			        </div>
+			      </li>
+			    </ul>
+			  </div>
+			</div>
+		</div>
+		<!-- images slider-->
+
+
+>>>>>>> audio_slider_imagenes
 
 	</div>
+
 
 	<!-- JQuery -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 	<!-- Materialize minified JavaScript -->
+<<<<<<< HEAD
 	<script src="js/materialize.min.js"></script>
+=======
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	<!-- NOUI Range-->
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.1.0/nouislider.min.js"></script>-->
+>>>>>>> audio_slider_imagenes
 
 	<script type="text/javascript">
 	$( document ).ready(function() {
 
+<<<<<<< HEAD
 		$('.modal-trigger').leanModal();
+=======
+	
+>>>>>>> audio_slider_imagenes
 
 		$("#modaler").click(function (){
 			// $( "#mini-video").addClass('active');
@@ -270,9 +363,86 @@
 			$('#slider-modal').openModal();
 		});
 
+<<<<<<< HEAD
 		$('#donate_button.click')
+=======
+
+		 //$('#float_button').openFAB();
+
+
 
 	});
+
+
+var encendido=0;
+
+// Target the audio element
+var audio_custom = document.getElementById("audio_custom"); 
+
+CreateSeekBar();
+
+audio_custom.ontimeupdate=
+function()
+{
+	SeekBar();
+
+}
+
+	$("#play").click(
+	function(){
+
+		if(encendido==0){
+
+		 audio_custom.play(); 
+		$("#icon").html("pause");
+		$("div#controls").slideDown();
+		encendido=1;
+		}
+		else
+		{
+			audio_custom.pause(); 
+			$("#icon").html("play_arrow");
+			encendido=0;
+		}
+>>>>>>> audio_slider_imagenes
+
+	});
+	
+
+	
+	$("#audioSeekBar").change(function(){
+
+			audioSeekBar();
+			console.log("audio seekbar");
+	});
+
+   // Create a Audio Seek Bar
+  function CreateSeekBar() { 
+     var seekbar = document.getElementById("audioSeekBar"); 
+
+	seekbar.connect ="lower";
+     seekbar.min = 0; 
+     seekbar.max = audio_custom.duration; 
+     seekbar.value = 0;
+}
+
+   // Allows you to seek audio on the range
+function audioSeekBar() { 
+     var seekbar = document.getElementById("audioSeekBar"); 
+     audio_custom.currentTime = seekbar.value; 
+} 
+ 
+   //Update SeekBar Bar
+function SeekBar() { 
+     var seekbar = document.getElementById("audioSeekBar"); 
+     seekbar.value = audio_custom.currentTime; 
+     console.log(seekbar.value);
+     //var timelapsed = document.getElementById("timelapsed"); 
+     //timelapsed.innerHTML = Math.round(audio_custom.currentTime)
+	 //+ "/" + Math.round(audio_custom.duration) + "(seconds)"; 
+} 
+
+
 
 
 
