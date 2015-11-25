@@ -12,13 +12,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- UI SLIDER-->
 	<!--<link href="css/nouislider.min.css" rel="stylesheet">-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css/extras/nouislider.min.css">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css/extras/nouislider.min.css">-->
 	<style type="text/css">
 
 		input#audioSeekBar::-ms-fill-lower {
   	  background: #777;
     	border-radius: 10px;
 		}
+
+		.thumb{
+
+			display: none;
+		}
+
 	</style>
 
 <!-- #5ac8e3  #68c9d0  #74c9bd  #7ecaaa  #87ca96  #8fcb83  #98cc6d  -->
@@ -147,37 +153,15 @@
 
 		<!-- BIG TEXT -->
 		<div class="row center-block">
-			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
+			<div class="col s12 l8 push-l2 card fifthColor">
 					<h4>How to apply Traction to your startup?</h4>
 			</div>
 		</div>
 		<!-- /BIG TEXT -->
 
-		<!-- Audio -->
-		<div class="row center-block">
-			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2" style="position:relative">
-				<audio id="audio_custom" controls style="display:none" >
-								<source src="audio/audio1.mp3" type="audio/mpeg" ontimeupdate="SeekBar()">
-							Your browser does not support the audio element.
-				</audio>
-				<div class="row">
-					<div class="col s3 l2">
-						<a  id="play" class="btn-floating btn-large red">
-									<i id="icon" class="large material-icons">play_arrow</i>
-							</a>
-					</div>
-
-						<div id="controls" style="display:none; padding-top:10px" class="col s9 l9">
-							<input type="range" step="any" id="audioSeekBar" style=""></input>
-						</div>
-				</div>
-			</div>
-		</div>
-		<!-- /Audio-->
-
 		<!-- images slider -->
-		<div class="row center-block">
-			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2" >
+		<div class="row center-block stuckUpper">
+			<div class="col s12 l8 push-l2 card fifthColor stuckUpperInside" >
 
 				<div class="slider">
 					<ul class="slides">
@@ -185,46 +169,71 @@
 							<img src="img/brainstom.jpg"> <!-- random image -->
 							<div class="caption center-align">
 								<h3>Brainstorming</h3>
-								<h5 class="light grey-text text-lighten-3">Paso 1</h5>
-							</div>
-						</li>
-						<li>
-							<img src="img/focus.jpg"> <!-- random image -->
-							<div class="caption left-align" >
-								<h3 style="margin-top:65%">Focus</h3>
-								<!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
-							</div>
-						</li>
-						<li>
-							<img src="img/prioritize.jpg"> <!-- random image -->
-							<div class="caption right-align">
-								<h3>Prioritize</h3>
-								<!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+								<h5 class="light grey-text text-lighten-3">Pitch at least one idea for all channels!</h5>
 							</div>
 						</li>
 						<li>
 							<img src="img/ranking.jpg"> <!-- random image -->
 							<div class="caption center-align">
 								<h3>Ranking</h3>
-								<!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+								<h5 class="light grey-text text-lighten-3">Place your ideas for each channel in one of 3 columns, Inner Circle(best), Potential(good) and Long Shot(not so good).</h5>
+							</div>
+						</li>
+						<li>
+							<img src="img/prioritize.jpg"> <!-- random image -->
+							<div class="caption right-align">
+								<h3>Prioritize</h3>
+								<h5 class="light grey-text text-lighten-3">Select JUST 3 channels that seems the most promising.</h5>
 							</div>
 						</li>
 						<li>
 							<img src="img/testing.jpg"> <!-- random image -->
 							<div class="caption center-align">
 								<h3>Testing</h3>
-								<!--<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>-->
+								<h5 class="light grey-text text-lighten-3">Micro-test those 3 channels and select the one that works best for you.</h5>
+							</div>
+						</li>
+						<li>
+							<img src="img/focus.jpg"> <!-- random image -->
+							<div class="caption left-align" >
+								<h3 style="margin-top:50%">Focus</h3>
+								<h5 class="light grey-text text-lighten-3"> Concentrate all your efforts on that one channel!</h5>
 							</div>
 						</li>
 					</ul>
 				</div>
+				
 			</div>
 		</div>
 		<!-- /images slider-->
+		<!-- Audio -->
+		<div class="row center-block stuckUpper">
+			<div class="col s12 l8 push-l2 card fifthColor stuckUpperInside" style="position:relative">
+				
+				<div class="row">
+					<audio id="audio_custom" controls style="display:none" >
+								<source src="audio/audio1.mp3" type="audio/mpeg" ontimeupdate="SeekBar()">
+							Your browser does not support the audio element.
+				</audio>
+					<div class="col s3 l2">
+						<a  id="play" class="btn-floating btn-large red">
+									<i id="icon" class="large material-icons">play_arrow</i>
+							</a>
+					</div>
+
+						<div id="controls" style="display:none; padding-top:0px" class="col s9 l9">
+							<p class="range-field">
+								<input type="range" step="any" id="audioSeekBar" style=""></input>
+							</p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Audio-->
 
 		<!-- Question -->
 		<div class="row center-block">
-			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
+			<div class="col s12 l8 push-l2 card sixthColor">
 					<h3>How can you define Traction?</h3>
 					<br/>
 					<a class="waves-effect waves-light btn modal-trigger" href="#modal2">A) Process of growing a startup</a>
@@ -259,7 +268,7 @@
 
 		<!-- BIG TEXT -->
 		<div class="row center-block">
-			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
+			<div class="col s12 l8 push-l2 card seventhColor">
 					<h4>Useful links:</h4>
 			</div>
 		</div>
@@ -267,8 +276,8 @@
 
 
 		<!-- USEFUL LINKS -->
-		<div class="row center-block">
-			<div class="col s12 l8 push-l2 card light-blue-ak-bg accent-2">
+		<div class="row center-block stuckUpper">
+			<div class="col s12 l8 push-l2 card seventhColor stuckUpperInside">
 				<div class="row">
 					<div class="col s12">
 						<a class="useful-link" href="http://tractionstack.com/">Traction Stack: Useful Resources</a>
@@ -437,6 +446,11 @@ function()
 function audioSeekBar() {
      var seekbar = document.getElementById("audioSeekBar");
      audio_custom.currentTime = seekbar.value;
+     $(".range-field .thumb:eq(1)").css("display","none");
+     var time=parseInt($(".range-field span.value:eq(0)").html());
+     console.log("time:"+time);
+     time=Math.round(time);
+     $(".range-field span.value").html(time+"");
 }
 
    //Update SeekBar Bar
