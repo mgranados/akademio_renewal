@@ -1,8 +1,27 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
 .blue-background{
 	background-color: blue;
 }
 .red-background{
 	background-color: red;
+}
+
+.bigtext{
+	font-weight: 700!important;
+	color: white!important;
+}
+
+.btn{
+	color: #030303!important;
+	background-color: #ffffff!important;
+}
+
+.btn:hover{
+	background-color: #f9f9f9!important;
+
 }
 
 .slider h5{
