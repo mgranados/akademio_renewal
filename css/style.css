@@ -135,3 +135,8 @@ a:hover{
 .stuckDown{
 
 }
+
+h5{
+	text-shadow: 1px 1px #000!important;
+	background-color: rgba(0, 0, 30, 0.2)!important;
+}
